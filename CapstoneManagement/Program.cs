@@ -1,6 +1,6 @@
+using CapstoneRegistration.Repository.Models;
+using CapstoneRegistration.Repository.Repository;
 using Microsoft.EntityFrameworkCore;
-using Repository.Models;
-using Repository.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
