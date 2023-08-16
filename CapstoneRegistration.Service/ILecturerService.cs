@@ -1,6 +1,10 @@
-﻿namespace CapstoneRegistration.Service
+﻿using CapstoneRegistration.Repository.Models;
+
+namespace CapstoneRegistration.Service
 {
-	public class ILecturerService
+	public interface ILecturerService
 	{
+		void DeleteSemester(int id);
+		List<Semester> GetAllSemester();
 	}
 }

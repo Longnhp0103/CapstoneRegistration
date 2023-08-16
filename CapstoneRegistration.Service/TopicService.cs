@@ -1,6 +1,6 @@
 ﻿namespace CapstoneRegistration.Service
 {
-	public class TopicService
+	public class TopicService : ITopicService
 	{
 	}
 }

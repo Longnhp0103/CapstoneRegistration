@@ -8,10 +8,10 @@ namespace CapstoneRegistration.Repository.Repository
 		protected readonly CapstoneRigistrationContext _dbContext;
 		protected readonly DbSet<T> _dbSet;
 
-		public GenericRepository()
+		public GenericRepository(CapstoneRigistrationContext dbContext)
 		{
-			_dbContext = new CapstoneRigistrationContext();
-			_dbSet = _dbContext.Set<T>();
+			_dbContext = dbContext;
+			_dbSet = dbContext.Set<T>();
 		}
 
 		public GenericRepository(CapstoneRigistrationContext dbContext, DbSet<T> dbSet)
@@ -27,6 +27,7 @@ namespace CapstoneRegistration.Repository.Repository
 			{
 				_dbSet.Remove(exist);
 			}
+			Save();
 		}
 
 		public IEnumerable<T> GetAll()
@@ -54,6 +55,7 @@ namespace CapstoneRegistration.Repository.Repository
 		{
 			_dbSet.Attach(obj);
 			_dbContext.Entry(obj).State = EntityState.Modified;
+			Save();
 		}
 	}
 }

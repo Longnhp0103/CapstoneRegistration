@@ -1,6 +1,6 @@
 ﻿namespace CapstoneRegistration.Service
 {
-	public class StudentService
+	public class StudentService : IStudentService
 	{
 	}
 }

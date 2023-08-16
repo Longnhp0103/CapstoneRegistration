@@ -1,6 +1,6 @@
 ﻿namespace CapstoneRegistration.Service
 {
-	public class GroupService
+	public class GroupService : IGroupService
 	{
 	}
 }

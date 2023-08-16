@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\CapstoneRegistration.Repository\CapstoneRegistration.Repository.csproj" />
     <ProjectReference Include="..\CapstoneRegistration.Service\CapstoneRegistration.Service.csproj" />
+    <ProjectReference Include="..\CapstoneRegistration.Test\CapstoneRegistration.Test.csproj" />
   </ItemGroup>
 
 </Project>
