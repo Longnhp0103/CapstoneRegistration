@@ -24,8 +24,4 @@
     <ProjectReference Include="..\CapstoneRegistration.Service\CapstoneRegistration.Service.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="ServiceTest\" />
-  </ItemGroup>
-
 </Project>

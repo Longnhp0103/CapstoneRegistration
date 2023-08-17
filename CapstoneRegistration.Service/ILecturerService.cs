@@ -4,7 +4,10 @@ namespace CapstoneRegistration.Service
 {
 	public interface ILecturerService
 	{
-		void DeleteSemester(int id);
-		List<Semester> GetAllSemester();
+		List<Lecturer> GetAllLecturer();
+		Lecturer GetLecturerId(int id);
+		void UpdateLecturer(Lecturer lecturer);
+		void UpdateLecturerStatus(int lecturerId, bool status);
+		void InsertLecturer(Lecturer lecturer);
 	}
 }
