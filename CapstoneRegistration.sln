@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapstoneRegistration.Reposi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapstoneRegistration.Service", "CapstoneRegistration.Service\CapstoneRegistration.Service.csproj", "{EF47C25D-DF62-4D94-9351-5990BD789261}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapstoneRegistration.Test", "CapstoneRegistration.Test\CapstoneRegistration.Test.csproj", "{67EB0B7F-4AB2-4B65-9530-571287646692}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapstoneRegistration.Test", "CapstoneRegistration.Test\CapstoneRegistration.Test.csproj", "{67EB0B7F-4AB2-4B65-9530-571287646692}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

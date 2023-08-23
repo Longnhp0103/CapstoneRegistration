@@ -1,0 +1,18 @@
+﻿@page
+@model CapstoneManagement.Pages.Admin.GroupManagement.AddStudentToGroupModel
+@{
+}
+<form method="post">
+    <div>
+        @foreach (var student in Model.Students)
+        {
+            <label>
+                <input type="checkbox" name="selectedStudents" value="@student.Id" />
+                @student.Code @student.FullName
+            </label>
+            <br />
+        }
+    </div>
+    <button type="submit" asp-route-id="@Model.Group.Id">Add</button>
+</form>
+

@@ -1,0 +1,51 @@
+﻿@page
+@model CapstoneManagement.Pages.LecturerPage.TopicManagement.LecturerModel
+@{
+}
+<h1>Topic</h1>
+
+<p>
+	@if (Model.Lecturer.Count < 2)
+	{
+	<p>
+		<form method="post">
+			<div class="form-group">
+				<label for="lecturerId">Select Lecturer:</label>
+				<select class="form-control" id="lecturerId" name="LecturerId">
+					@foreach (var lecturer in Model.Lecturers)
+					{
+						<option value="@lecturer.Id">@Html.DisplayFor(s => lecturer.Name)</option>
+					}
+				</select>
+			</div>
+			<button type="submit" class="btn btn-primary">Add New Lecturer</button>
+		</form>
+
+	</p>
+	}
+</p>
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.Lecturer[0].Code)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Lecturer[0].Name)
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model.Lecturer)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => item.Code)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Name)
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

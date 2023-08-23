@@ -1,5 +1,6 @@
 using CapstoneRegistration.Repository.Models;
 using CapstoneRegistration.Repository.Repository;
+using CapstoneRegistration.Service;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,6 +20,16 @@ builder.Services.AddScoped<IGroupRepository, GroupRepository>();
 builder.Services.AddScoped<ILecturerRepository, LecturerRepository>();
 
 builder.Services.AddScoped<ISemesterRepository, SemesterRepository>();
+
+builder.Services.AddScoped<ILecturerService, LecturerService>();
+
+builder.Services.AddScoped<IStudentService, StudentService>();
+
+builder.Services.AddScoped<ISemesterService, SemesterService>();
+
+builder.Services.AddScoped<ITopicService, TopicService>();
+
+builder.Services.AddScoped<IGroupService, GroupService>();
 
 builder.Services.AddSession(options =>
 {

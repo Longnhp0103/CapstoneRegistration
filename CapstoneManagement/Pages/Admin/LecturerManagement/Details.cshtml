@@ -1,0 +1,43 @@
+﻿@page
+@model CapstoneManagement.Pages.Admin.LecturerManagement.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Lecturer</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lecturer.Code)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lecturer.Code)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lecturer.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lecturer.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lecturer.Password)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lecturer.Password)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lecturer.Status)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lecturer.Status)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Lecturer?.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
