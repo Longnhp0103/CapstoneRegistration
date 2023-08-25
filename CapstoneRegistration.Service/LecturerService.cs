@@ -36,7 +36,7 @@ namespace CapstoneRegistration.Service
 
 		public List<Lecturer> GetAllLecturer()
 		{
-			return (List<Lecturer>)_repository.GetAll();
+			return (List<Lecturer>)_repository.GetAll().Where(l => l.Status == true).ToList();
 		}
 
 		public Lecturer GetLecturerByCode(string code)
@@ -52,6 +52,19 @@ namespace CapstoneRegistration.Service
 				.ToList();
 			return lecturers;
 		}
+		public Lecturer GetInMainLecturerByGroup(int groupId)
+		{
+			int inMainLecturerId = _context.LecturerInGroups
+				.Where(g => g.GroupId == groupId).Select(l => l.InMainLecturer).FirstOrDefault();
+			if (inMainLecturerId != 0)
+			{
+				Lecturer inMainLecturer = _context.Lecturers.Find(inMainLecturerId);
+				return inMainLecturer;
+			}
+
+			return null;
+		}
+
 
 		public Lecturer GetLecturerId(int id)
 		{
@@ -89,5 +102,10 @@ namespace CapstoneRegistration.Service
 			}
 		}
 
+		public void AddLecturerToGroup(LecturerInGroup lecturerInGroup)
+		{
+			_context.LecturerInGroups.Add(lecturerInGroup);
+			_context.SaveChanges();
+		}
 	}
 }

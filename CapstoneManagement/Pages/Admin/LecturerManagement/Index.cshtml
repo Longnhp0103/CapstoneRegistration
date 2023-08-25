@@ -97,7 +97,10 @@
 				<div class="content-wrapper">
 					<div class="card">
 						<h5 class="card-header">Lecturer</h5>
-						<a asp-page="./Create">Create new</a>
+						@if(Model.GroupId == 0)
+						{
+							<a asp-page="./Create">Create new</a>
+						}
 						<div class="table-responsive text-nowrap">
 							<table class="table">
 								<thead>
@@ -142,6 +145,10 @@
 										</tr>
 									}
 								</tbody>
+								@if (Model.Lecturer.Count < 2)
+								{
+									<a asp-page="/Admin/GroupManagement/AddLecturerToGroup" asp-route-id="@Model.GroupId">Add Lecturer to Group</a>
+								}
 							</table>
 						</div>
 					</div>

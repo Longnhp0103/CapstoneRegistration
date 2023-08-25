@@ -16,5 +16,7 @@ namespace CapstoneRegistration.Service
 		List<Lecturer> GetLecturerByGroup(int groupId);
 		Lecturer GetLecturerByCode(string code);
 		List<Lecturer> GetLecturersByTopic(int topicId);
+		Lecturer GetInMainLecturerByGroup(int groupId);
+		void AddLecturerToGroup(LecturerInGroup lecturerInGroup);
 	}
 }

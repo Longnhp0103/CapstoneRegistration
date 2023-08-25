@@ -49,7 +49,7 @@ namespace CapstoneManagement.Pages.Admin.LecturerManagement
 			}
 			else
 			{
-				ModelState.AddModelError("", "Not found");
+				HttpContext.Session.SetString("Error", "Lecturer is exist");
 				return Page();
 			}
 		}

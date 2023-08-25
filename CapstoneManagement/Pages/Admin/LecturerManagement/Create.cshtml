@@ -15,17 +15,17 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Lecturer.Code" class="control-label"></label>
-                <input asp-for="Lecturer.Code" class="form-control" />
+                <input asp-for="Lecturer.Code" class="form-control" required/>
                 <span asp-validation-for="Lecturer.Code" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Lecturer.Name" class="control-label"></label>
-                <input asp-for="Lecturer.Name" class="form-control" />
+                <input asp-for="Lecturer.Name" class="form-control" required/>
                 <span asp-validation-for="Lecturer.Name" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Lecturer.Password" class="control-label"></label>
-                <input asp-for="Lecturer.Password" class="form-control" />
+                <input asp-for="Lecturer.Password" class="form-control" required/>
                 <span asp-validation-for="Lecturer.Password" class="text-danger"></span>
             </div>
             <div class="form-group form-check">

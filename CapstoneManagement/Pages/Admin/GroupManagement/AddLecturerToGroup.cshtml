@@ -1,0 +1,35 @@
+﻿@page
+@model CapstoneManagement.Pages.Admin.GroupManagement.AddLecturerToGroupModel
+@{
+}
+<form method="post">
+    <div>
+        <label for="lecturerType">Select Lecturer:</label>
+    </div>
+    <div>
+        <select id="lecturer" name="lecturerSelected">
+            @foreach (var lecturer in Model.Lecturers)
+            {
+                <option value="@lecturer.Id">@lecturer.Code @lecturer.Name</option>
+            }
+        </select>
+        <br />
+    </div>
+    <div>
+        <label for="mainLecturerType">Select Main Lecturer:</label>
+    </div>
+    <div>
+        <select id="mainLecturer" name="mainLecturerSelected">
+            @foreach (var lecturer in Model.Lecturers)
+            {
+                <option value="@lecturer.Id">@lecturer.Code @lecturer.Name</option>
+            }
+        </select>
+        <br />
+    </div>
+    <input type="hidden" name="groupId" value="@Model.Group.Id" />
+    <button type="submit">Add</button>
+</form>
+
+
+

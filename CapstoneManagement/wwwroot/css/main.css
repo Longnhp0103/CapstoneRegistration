@@ -505,3 +505,8 @@ iframe {
         opacity: 1;
     }
 }
+
+.alert.alert-danger {
+    font-weight: bold;
+    color: red;
+}

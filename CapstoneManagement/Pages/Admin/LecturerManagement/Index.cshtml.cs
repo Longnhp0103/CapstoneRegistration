@@ -14,7 +14,7 @@ namespace CapstoneManagement.Pages.Admin.LecturerManagement
 		}
 
 		public IList<Lecturer> Lecturer { get; set; } = default!;
-
+		public int GroupId { get; set; }
 		public async Task OnGetAsync(int? id)
 		{
 			if (id == null)
@@ -23,7 +23,13 @@ namespace CapstoneManagement.Pages.Admin.LecturerManagement
 			}
 			else
 			{
+				GroupId = id.Value;
 				Lecturer = lecturerService.GetLecturerByGroup(id.Value);
+				Lecturer inMainLecturer = lecturerService.GetInMainLecturerByGroup(id.Value);
+				if (inMainLecturer != null)
+				{
+					Lecturer.Add(inMainLecturer);
+				}
 			}
 		}
 	}
